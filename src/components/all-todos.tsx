@@ -1,5 +1,6 @@
 import { useTodo } from "@/hooks/useTodos";
 import { Input } from "./input";
+import { TodoList } from "./todo-list";
 
 interface AllTodosProps {
   title: string;
@@ -13,16 +14,7 @@ export const AllTodos = ({ title }: AllTodosProps) => {
       <Input addTodo={addTodo} />
       <ul>
         {todos?.map((todo, idx) => (
-          <li key={idx} className="flex gap-x-3">
-            <input
-              type="checkbox"
-              checked={todo.isCompleted}
-              onChange={() => handleCheck(idx)}
-            />
-            <span className={`${todo.isCompleted ? "line-through" : ""}`}>
-              {todo.text}
-            </span>
-          </li>
+          <TodoList key={idx} todo={todo} handleCheck={handleCheck} idx={idx} />
         ))}
       </ul>
     </div>
