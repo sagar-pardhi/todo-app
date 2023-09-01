@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-interface TabsProps {
-  children?: React.ReactNode[] | React.ReactNode;
-}
-
-export const Tabs = ({ children }: TabsProps) => {
+export const Tabs = ({ children }: { children: React.JSX.Element[] }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.title);
 
   return (
