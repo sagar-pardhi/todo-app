@@ -1,7 +1,8 @@
 interface TodoListProps {
-  todos: Todo[];
+  // todos: Todo[];
 }
 
-export const TodoList = ({ todos }: TodoListProps) => {
+export const TodoList = () => {
+  // TODO: Refactor TodoList into seperate component
   return <ul></ul>;
 };
