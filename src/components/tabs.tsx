@@ -4,7 +4,7 @@ export const Tabs = ({ children }: { children: React.JSX.Element[] }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.title);
 
   return (
-    <div className="flex flex-col gap-x-5 w-[500px]">
+    <div className="flex flex-col gap-x-5 md:w-[500px]">
       <ul className="flex gap-x-10 justify-between items-center border-b">
         {children.map((child) => {
           const title = child.props.title;

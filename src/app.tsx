@@ -5,7 +5,7 @@ import { CompletedTodos } from "./components/completed-todos";
 
 export const App = () => {
   return (
-    <main className="container flex flex-col items-center mx-auto my-5">
+    <main className="container flex flex-col items-center mx-auto my-5 px-5">
       <h1 className="text-3xl font-bold">#todo</h1>
       <div className="my-5">
         <Tabs>
